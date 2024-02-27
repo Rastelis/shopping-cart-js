@@ -1,0 +1,24 @@
+header {
+    position: fixed;
+    width: 100%;
+    padding: 10px 92px;
+    background-color: wheat;
+    display: flex;
+    justify-content: right;
+    z-index: 3;
+}
+.qty-input {
+    width: 2em;
+    text-align: center;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+.shopping-cart button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

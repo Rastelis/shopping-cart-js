@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produktai</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .row {
+            border-bottom: 1px solid rgb(214, 214, 214);
+            padding: 2rem 0;
+        }
+
+        .image-shop img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .image-cart img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .btn-warning {
+            width: 250px;
+            font-weight: 600;
+        }
+
+        .shop .price {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .discount-price {
+            color: rgb(232, 0, 0);
+        }
+
+        .regular-price {
+            color: rgb(98, 98, 98);
+            text-decoration: line-through;
+            font-size: 14px;
+        }
+
+        .rating {
+            position: relative;
+        }
+
+        .yellow-stars {
+            color: rgb(246, 217, 71);
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .stars-container {
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container d-flex justify-content-end"><button class="btn btn-warning col-3 go-to-cart">Go to Cart</button></div>
+    </header>
+    <div class="header-placeholder"></div>
+    <section>
+        <div class="shop container"></div>
+        <div class="shopping-cart-container container">
+            <div class="shopping-cart col-8"></div>
+            <div class="col-4 my-4">
+                <div class="shopping-cart-summary p-3 bg-secondary rounded">
+                    <h4>Summary</h4>
+                    <div class="price-group d-flex my-3">
+                        <div>ITEMS <span class="item-qty"></span></div>
+                        <div class="sum ms-3"></div>
+                    </div>
+                    <div>SHIPING</div>
+                    <select onchange="updateTotalPrice()" class="form-control my-3" name="shiping" id="shiping">
+                        <option value="0">Select delivery option</option>
+                        <option value="5">Standard-Delivery-&dollar;5.00</option>
+                        <option value="10">Premium-Delivery-&dollar;10.00</option>
+                    </select>
+                    <div>DISCOUNT CODE</div>
+                    <input class="form-control my-3" type="text" placeholder="Enter your code">
+                    <div class="total-group my-3 d-flex">
+                        <div>TOTAL PRICE</div>
+                        <div class="total-price ms-3"></div>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>`
